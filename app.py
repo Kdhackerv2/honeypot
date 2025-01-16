@@ -79,3 +79,7 @@ if __name__ == '__main__':
     if not os.path.exists(DATABASE):
         init_db()
     app.run(debug=True)
+        # Get the port from the environment variable
+    port = int(os.environ.get("PORT", 5000))
+    # Run the app on 0.0.0.0 and the specified port
+    app.run(host="0.0.0.0", port=port)
