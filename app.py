@@ -96,7 +96,7 @@ def insecure_auth():
     if auth_cookie == 'admin':
         return "Welcome Admin! You have full access."
     else:
-        response = make_response("You are not authenticated. Try setting the auth cookie to 'admin'.")
+        response = make_response("You are not authenticated to admin.")
         response.set_cookie('auth', 'guest')
         return response
 
